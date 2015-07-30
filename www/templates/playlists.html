@@ -1,0 +1,11 @@
+<ion-view view-title="Playlists">
+  <ion-content>
+    <ion-spinner ng-hide="terminouDeCarregar" style="width: 50px; margin: 20px auto; display:block;"></ion-spinner>
+    <ion-list>
+      <ion-item ng-repeat="user in playlists" href="#/app/playlists/{{user.user.username}}">
+        <img ng-src="{{user.user.picture.thumbnail}}" alt="" />
+        {{user.user.username}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
